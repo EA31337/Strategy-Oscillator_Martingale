@@ -32,10 +32,10 @@ enum ENUM_STG_OSCILLATOR_MARTINGALE_TYPE {
 };
 
 // User input params.
-INPUT_GROUP("Oscillator_Martingale strategy: main strategy params");
+INPUT_GROUP("Oscillator Martingale strategy: main strategy params");
 INPUT ENUM_STG_OSCILLATOR_MARTINGALE_TYPE Oscillator_Martingale_Type =
-    STG_OSCILLATOR_MARTINGALE_TYPE_CCI;  // Oscillator_Martingale type
-INPUT_GROUP("Oscillator_Martingale strategy: strategy params");
+    STG_OSCILLATOR_MARTINGALE_TYPE_RSI;  // Oscillator_Martingale type
+INPUT_GROUP("Oscillator Martingale strategy: strategy params");
 INPUT float Oscillator_Martingale_LotSize = 0;                // Lot size
 INPUT int Oscillator_Martingale_SignalOpenMethod = 6;         // Signal open method
 INPUT float Oscillator_Martingale_SignalOpenLevel = 0;        // Signal open level
@@ -45,7 +45,7 @@ INPUT int Oscillator_Martingale_SignalOpenBoostMethod = 0;    // Signal open boo
 INPUT int Oscillator_Martingale_SignalCloseMethod = 0;        // Signal close method
 INPUT int Oscillator_Martingale_SignalCloseFilter = 32;       // Signal close filter (-127-127)
 INPUT float Oscillator_Martingale_SignalCloseLevel = 0;       // Signal close level
-INPUT int Oscillator_Martingale_PriceStopMethod = 0;          // Price limit method
+INPUT int Oscillator_Martingale_PriceStopMethod = 1;          // Price limit method
 INPUT float Oscillator_Martingale_PriceStopLevel = 2;         // Price limit level
 INPUT int Oscillator_Martingale_TickFilterMethod = 32;        // Tick filter method (0-255)
 INPUT float Oscillator_Martingale_MaxSpread = 4.0;            // Max spread to trade (in pips)
@@ -53,90 +53,90 @@ INPUT short Oscillator_Martingale_Shift = 0;                  // Shift
 INPUT float Oscillator_Martingale_OrderCloseLoss = 80;        // Order close loss
 INPUT float Oscillator_Martingale_OrderCloseProfit = 80;      // Order close profit
 INPUT int Oscillator_Martingale_OrderCloseTime = -30;         // Order close time in mins (>0) or bars (<0)
-INPUT_GROUP("Oscillator_Martingale strategy: AC oscillator params");
+INPUT_GROUP("Oscillator Martingale strategy: AC oscillator params");
 INPUT int Oscillator_Martingale_Indi_AC_Shift = 0;                                      // Shift
 INPUT ENUM_IDATA_SOURCE_TYPE Oscillator_Martingale_Indi_AC_SourceType = IDATA_BUILTIN;  // Source type
-INPUT_GROUP("Oscillator_Martingale strategy: AD oscillator params");
+INPUT_GROUP("Oscillator Martingale strategy: AD oscillator params");
 INPUT int Oscillator_Martingale_Indi_AD_Shift = 0;                                      // Shift
 INPUT ENUM_IDATA_SOURCE_TYPE Oscillator_Martingale_Indi_AD_SourceType = IDATA_BUILTIN;  // Source type
-INPUT_GROUP("Oscillator_Martingale strategy: ATR oscillator params");
+INPUT_GROUP("Oscillator Martingale strategy: ATR oscillator params");
 INPUT int Oscillator_Martingale_Indi_ATR_Period = 13;                                    // Period
 INPUT int Oscillator_Martingale_Indi_ATR_Shift = 0;                                      // Shift
 INPUT ENUM_IDATA_SOURCE_TYPE Oscillator_Martingale_Indi_ATR_SourceType = IDATA_BUILTIN;  // Source type
-INPUT_GROUP("Oscillator_Martingale strategy: Awesome oscillator params");
+INPUT_GROUP("Oscillator Martingale strategy: Awesome oscillator params");
 INPUT int Oscillator_Martingale_Indi_Awesome_Shift = 0;                                      // Shift
 INPUT ENUM_IDATA_SOURCE_TYPE Oscillator_Martingale_Indi_Awesome_SourceType = IDATA_BUILTIN;  // Source type
-INPUT_GROUP("Oscillator_Martingale strategy: BearsPower oscillator params");
+INPUT_GROUP("Oscillator Martingale strategy: BearsPower oscillator params");
 INPUT int Oscillator_Martingale_Indi_BearsPower_Period = 30;                                    // Period
 INPUT ENUM_APPLIED_PRICE Oscillator_Martingale_Indi_BearsPower_Applied_Price = PRICE_CLOSE;     // Applied Price
 INPUT int Oscillator_Martingale_Indi_BearsPower_Shift = 0;                                      // Shift
 INPUT ENUM_IDATA_SOURCE_TYPE Oscillator_Martingale_Indi_BearsPower_SourceType = IDATA_BUILTIN;  // Source type
-INPUT_GROUP("Oscillator_Martingale strategy: BullsPower oscillator params");
+INPUT_GROUP("Oscillator Martingale strategy: BullsPower oscillator params");
 INPUT int Oscillator_Martingale_Indi_BullsPower_Period = 30;                                    // Period
 INPUT ENUM_APPLIED_PRICE Oscillator_Martingale_Indi_BullsPower_Applied_Price = PRICE_CLOSE;     // Applied Price
 INPUT int Oscillator_Martingale_Indi_BullsPower_Shift = 0;                                      // Shift
 INPUT ENUM_IDATA_SOURCE_TYPE Oscillator_Martingale_Indi_BullsPower_SourceType = IDATA_BUILTIN;  // Source type
-INPUT_GROUP("Oscillator_Martingale strategy: BWMFI oscillator params");
+INPUT_GROUP("Oscillator Martingale strategy: BWMFI oscillator params");
 INPUT int Oscillator_Martingale_Indi_BWMFI_Shift = 1;                                      // Shift
 INPUT ENUM_IDATA_SOURCE_TYPE Oscillator_Martingale_Indi_BWMFI_SourceType = IDATA_BUILTIN;  // Source type
-INPUT_GROUP("Oscillator_Martingale strategy: CCI oscillator params");
+INPUT_GROUP("Oscillator Martingale strategy: CCI oscillator params");
 INPUT int Oscillator_Martingale_Indi_CCI_Period = 20;                                    // Period
 INPUT ENUM_APPLIED_PRICE Oscillator_Martingale_Indi_CCI_Applied_Price = PRICE_TYPICAL;   // Applied Price
 INPUT int Oscillator_Martingale_Indi_CCI_Shift = 0;                                      // Shift
 INPUT ENUM_IDATA_SOURCE_TYPE Oscillator_Martingale_Indi_CCI_SourceType = IDATA_BUILTIN;  // Source type
-INPUT_GROUP("Oscillator_Martingale strategy: Chaikin oscillator params");
+INPUT_GROUP("Oscillator Martingale strategy: Chaikin oscillator params");
 INPUT int Oscillator_Martingale_Indi_CHO_InpFastMA = 10;                                 // Fast EMA period
 INPUT int Oscillator_Martingale_Indi_CHO_InpSlowMA = 30;                                 // Slow MA period
 INPUT ENUM_MA_METHOD Oscillator_Martingale_Indi_CHO_InpSmoothMethod = MODE_SMMA;         // MA method
 INPUT ENUM_APPLIED_VOLUME Oscillator_Martingale_Indi_CHO_InpVolumeType = VOLUME_TICK;    // Volumes
 INPUT int Oscillator_Martingale_Indi_CHO_Shift = 0;                                      // Shift
 INPUT ENUM_IDATA_SOURCE_TYPE Oscillator_Martingale_Indi_CHO_SourceType = IDATA_BUILTIN;  // Source type
-INPUT_GROUP("Oscillator_Martingale strategy: Chaikin Volatility oscillator params");
+INPUT_GROUP("Oscillator Martingale strategy: Chaikin Volatility oscillator params");
 INPUT unsigned int Oscillator_Martingale_Indi_CHV_Smooth_Period;                         // Smooth period
 INPUT unsigned int Oscillator_Martingale_Indi_CHV_Period;                                // Period
 INPUT ENUM_CHV_SMOOTH_METHOD Oscillator_Martingale_Indi_CHV_Smooth_Method;               // Smooth method
 INPUT int Oscillator_Martingale_Indi_CHV_Shift = 0;                                      // Shift
 INPUT ENUM_IDATA_SOURCE_TYPE Oscillator_Martingale_Indi_CHV_SourceType = IDATA_BUILTIN;  // Source type
-INPUT_GROUP("Oscillator_Martingale strategy: DeMarker indicator params");
+INPUT_GROUP("Oscillator Martingale strategy: DeMarker indicator params");
 INPUT int Oscillator_Martingale_Indi_DeMarker_Period = 23;                                    // Period
 INPUT int Oscillator_Martingale_Indi_DeMarker_Shift = 0;                                      // Shift
 INPUT ENUM_IDATA_SOURCE_TYPE Oscillator_Martingale_Indi_DeMarker_SourceType = IDATA_BUILTIN;  // Source type
-INPUT_GROUP("Oscillator_Martingale strategy: MFI oscillator params");
+INPUT_GROUP("Oscillator Martingale strategy: MFI oscillator params");
 INPUT int Oscillator_Martingale_Indi_MFI_MA_Period = 22;                                           // MA Period
 INPUT ENUM_APPLIED_VOLUME Oscillator_Martingale_Indi_MFI_Applied_Volume = (ENUM_APPLIED_VOLUME)0;  // Applied volume.
 INPUT int Oscillator_Martingale_Indi_MFI_Shift = 0;                                                // Shift
 INPUT ENUM_IDATA_SOURCE_TYPE Oscillator_Martingale_Indi_MFI_SourceType = IDATA_BUILTIN;            // Source type
-INPUT_GROUP("Oscillator_Martingale strategy: Momentum oscillator params");
+INPUT_GROUP("Oscillator Martingale strategy: Momentum oscillator params");
 INPUT int Oscillator_Martingale_Indi_Momentum_Period = 12;                                    // Averaging period
 INPUT ENUM_APPLIED_PRICE Oscillator_Martingale_Indi_Momentum_Applied_Price = PRICE_CLOSE;     // Applied Price
 INPUT int Oscillator_Martingale_Indi_Momentum_Shift = 0;                                      // Shift
 INPUT ENUM_IDATA_SOURCE_TYPE Oscillator_Martingale_Indi_Momentum_SourceType = IDATA_BUILTIN;  // Source type
-INPUT_GROUP("Oscillator_Martingale strategy: OBV oscillator params");
+INPUT_GROUP("Oscillator Martingale strategy: OBV oscillator params");
 INPUT ENUM_APPLIED_PRICE Oscillator_Martingale_Indi_OBV_Applied_Price = PRICE_CLOSE;     // Applied Price
 INPUT int Oscillator_Martingale_Indi_OBV_Shift = 1;                                      // Shift
 INPUT ENUM_IDATA_SOURCE_TYPE Oscillator_Martingale_Indi_OBV_SourceType = IDATA_BUILTIN;  // Source type
-INPUT_GROUP("Oscillator_Martingale strategy: PVT oscillator params");
+INPUT_GROUP("Oscillator Martingale strategy: PVT oscillator params");
 INPUT ENUM_APPLIED_VOLUME Oscillator_Martingale_Indi_PVT_InpVolumeType = VOLUME_TICK;    // Volumes
 INPUT int Oscillator_Martingale_Indi_PVT_Shift = 0;                                      // Shift
 INPUT ENUM_IDATA_SOURCE_TYPE Oscillator_Martingale_Indi_PVT_SourceType = IDATA_BUILTIN;  // Source type
-INPUT_GROUP("Oscillator_Martingale strategy: ROC oscillator params");
+INPUT_GROUP("Oscillator Martingale strategy: ROC oscillator params");
 INPUT int Oscillator_Martingale_Indi_ROC_Period = 16;                                    // Period
 INPUT ENUM_APPLIED_PRICE Oscillator_Martingale_Indi_ROC_Applied_Price = PRICE_WEIGHTED;  // Applied Price
 INPUT int Oscillator_Martingale_Indi_ROC_Shift = 0;                                      // Shift
 INPUT ENUM_IDATA_SOURCE_TYPE Oscillator_Martingale_Indi_ROC_SourceType = IDATA_BUILTIN;  // Source type
-INPUT_GROUP("Oscillator_Martingale strategy: RSI oscillator params");
+INPUT_GROUP("Oscillator Martingale strategy: RSI oscillator params");
 INPUT int Oscillator_Martingale_Indi_RSI_Period = 16;                                    // Period
 INPUT ENUM_APPLIED_PRICE Oscillator_Martingale_Indi_RSI_Applied_Price = PRICE_WEIGHTED;  // Applied Price
 INPUT int Oscillator_Martingale_Indi_RSI_Shift = 0;                                      // Shift
 INPUT ENUM_IDATA_SOURCE_TYPE Oscillator_Martingale_Indi_RSI_SourceType = IDATA_BUILTIN;  // Source type
-INPUT_GROUP("Oscillator_Martingale strategy: StdDev oscillator params");
+INPUT_GROUP("Oscillator Martingale strategy: StdDev oscillator params");
 INPUT int Oscillator_Martingale_Indi_StdDev_MA_Period = 24;                                 // Period
 INPUT int Oscillator_Martingale_Indi_StdDev_MA_Shift = 0;                                   // MA Shift
 INPUT ENUM_MA_METHOD Oscillator_Martingale_Indi_StdDev_MA_Method = (ENUM_MA_METHOD)3;       // MA Method
 INPUT ENUM_APPLIED_PRICE Oscillator_Martingale_Indi_StdDev_Applied_Price = PRICE_WEIGHTED;  // Applied Price
 INPUT int Oscillator_Martingale_Indi_StdDev_Shift = 0;                                      // Shift
 INPUT ENUM_IDATA_SOURCE_TYPE Oscillator_Martingale_Indi_StdDev_SourceType = IDATA_BUILTIN;  // Source type
-INPUT_GROUP("Oscillator_Martingale strategy: Stochastic oscillator params");
+INPUT_GROUP("Oscillator Martingale strategy: Stochastic oscillator params");
 INPUT int Oscillator_Martingale_Indi_Stochastic_KPeriod = 8;                      // K line period
 INPUT int Oscillator_Martingale_Indi_Stochastic_DPeriod = 12;                     // D line period
 INPUT int Oscillator_Martingale_Indi_Stochastic_Slowing = 12;                     // Slowing
@@ -144,12 +144,12 @@ INPUT ENUM_MA_METHOD Oscillator_Martingale_Indi_Stochastic_MA_Method = MODE_EMA;
 INPUT ENUM_STO_PRICE Oscillator_Martingale_Indi_Stochastic_Price_Field = 0;  // Price (0 - Low/High or 1 - Close/Close)
 INPUT int Oscillator_Martingale_Indi_Stochastic_Shift = 0;                   // Shift
 INPUT ENUM_IDATA_SOURCE_TYPE Oscillator_Martingale_Indi_Stochastic_SourceType = IDATA_BUILTIN;  // Source type
-INPUT_GROUP("Oscillator_Martingale strategy: TRIX oscillator params");
+INPUT_GROUP("Oscillator Martingale strategy: TRIX oscillator params");
 INPUT int Oscillator_Martingale_Indi_TRIX_InpPeriodEMA = 14;                              // EMA period
 INPUT ENUM_APPLIED_PRICE Oscillator_Martingale_Indi_TRIX_Applied_Price = PRICE_WEIGHTED;  // Applied Price
 INPUT int Oscillator_Martingale_Indi_TRIX_Shift = 0;                                      // Shift
 INPUT ENUM_IDATA_SOURCE_TYPE Oscillator_Martingale_Indi_TRIX_SourceType = IDATA_BUILTIN;  // Source type
-INPUT_GROUP("Oscillator_Martingale strategy: Ultimate oscillator params");
+INPUT_GROUP("Oscillator Martingale strategy: Ultimate oscillator params");
 INPUT int Oscillator_Martingale_Indi_UO_InpFastPeriod = 7;                              // Fast ATR period
 INPUT int Oscillator_Martingale_Indi_UO_InpMiddlePeriod = 14;                           // Middle ATR period
 INPUT int Oscillator_Martingale_Indi_UO_InpSlowPeriod = 28;                             // Slow ATR period
@@ -158,14 +158,14 @@ INPUT int Oscillator_Martingale_Indi_UO_InpMiddleK = 2;                         
 INPUT int Oscillator_Martingale_Indi_UO_InpSlowK = 1;                                   // Slow K
 INPUT int Oscillator_Martingale_Indi_UO_Shift = 0;                                      // Shift
 INPUT ENUM_IDATA_SOURCE_TYPE Oscillator_Martingale_Indi_UO_SourceType = IDATA_BUILTIN;  // Source type
-INPUT_GROUP("Oscillator_Martingale strategy: Williams' Accumulation/Distribution oscillator params");
+INPUT_GROUP("Oscillator Martingale strategy: Williams' Accumulation/Distribution oscillator params");
 INPUT int Oscillator_Martingale_Indi_WAD_Shift = 0;                                      // Shift
 INPUT ENUM_IDATA_SOURCE_TYPE Oscillator_Martingale_Indi_WAD_SourceType = IDATA_BUILTIN;  // Source type
-INPUT_GROUP("Oscillator_Martingale strategy: WPR oscillator params");
+INPUT_GROUP("Oscillator Martingale strategy: WPR oscillator params");
 INPUT int Oscillator_Martingale_Indi_WPR_Period = 18;                                    // Period
 INPUT int Oscillator_Martingale_Indi_WPR_Shift = 0;                                      // Shift
 INPUT ENUM_IDATA_SOURCE_TYPE Oscillator_Martingale_Indi_WPR_SourceType = IDATA_BUILTIN;  // Source type
-INPUT_GROUP("Oscillator_Martingale strategy: Volumes oscillator params");
+INPUT_GROUP("Oscillator Martingale strategy: Volumes oscillator params");
 INPUT ENUM_APPLIED_VOLUME Oscillator_Martingale_Indi_VOL_InpVolumeType = VOLUME_TICK;    // Volumes
 INPUT int Oscillator_Martingale_Indi_VOL_Shift = 0;                                      // Shift
 INPUT ENUM_IDATA_SOURCE_TYPE Oscillator_Martingale_Indi_VOL_SourceType = IDATA_BUILTIN;  // Source type
@@ -174,6 +174,10 @@ INPUT ENUM_IDATA_SOURCE_TYPE Oscillator_Martingale_Indi_VOL_SourceType = IDATA_B
 
 // Defines struct with default user strategy values.
 struct Stg_Oscillator_Martingale_Params_Defaults : StgParams {
+ protected:
+  double opricemax, opricemin;
+
+ public:
   Stg_Oscillator_Martingale_Params_Defaults()
       : StgParams(::Oscillator_Martingale_SignalOpenMethod, ::Oscillator_Martingale_SignalOpenFilterMethod,
                   ::Oscillator_Martingale_SignalOpenLevel, ::Oscillator_Martingale_SignalOpenBoostMethod,
@@ -187,12 +191,22 @@ struct Stg_Oscillator_Martingale_Params_Defaults : StgParams {
     Set(STRAT_PARAM_OCT, Oscillator_Martingale_OrderCloseTime);
     Set(STRAT_PARAM_SOFT, Oscillator_Martingale_SignalOpenFilterTime);
   }
+  // Getters.
+  double GetPriceMax() { return opricemax; }
+  double GetPriceMin() { return opricemin; }
+  // Setters.
+  void SetPriceMax(double _value) { opricemax = _value > 0.0 ? _value : 0.0; }
+  void SetPriceMin(double _value) { opricemin = _value > 0.0 && _value != DBL_MAX ? _value : 0.0; }
 };
 
 class Stg_Oscillator_Martingale : public Strategy {
+ protected:
+  Stg_Oscillator_Martingale_Params_Defaults ssparams;
+  Trade strade;
+
  public:
   Stg_Oscillator_Martingale(StgParams &_sparams, TradeParams &_tparams, ChartParams &_cparams, string _name = "")
-      : Strategy(_sparams, _tparams, _cparams, _name) {}
+      : Strategy(_sparams, _tparams, _cparams, _name), strade(_tparams, _cparams) {}
 
   static Stg_Oscillator_Martingale *Init(ENUM_TIMEFRAMES _tf = NULL, EA *_ea = NULL) {
     // Initialize strategy initial values.
@@ -553,6 +567,62 @@ class Stg_Oscillator_Martingale : public Strategy {
   }
 
   /**
+   * Loads active orders by magic number.
+   */
+  bool OrdersLoadByMagic() {
+    double _opricemax = 0.0, _opricemin = DBL_MAX;
+    ResetLastError();
+    int _total_active = TradeStatic::TotalActive();
+    unsigned long _magic_no = Get<long>(STRAT_PARAM_ID);  // strade.Get<long>(TRADE_PARAM_MAGIC_NO);
+    DictStruct<long, Ref<Order>> *_orders_active = strade.GetOrdersActive();
+    for (int pos = 0; pos < _total_active; pos++) {
+      if (OrderStatic::SelectByPosition(pos)) {
+        unsigned long _magic_no_order = OrderStatic::MagicNumber();
+        if (_magic_no_order == _magic_no) {
+          unsigned long _ticket = OrderStatic::Ticket();
+          if (!_orders_active.KeyExists(_ticket)) {
+            Ref<Order> _order = new Order(_ticket);
+            double _order_price_open = _order.Ptr().Get<float>(ORDER_PROP_PRICE_OPEN);
+            if (_order_price_open > _opricemax) {
+              _opricemax = _order_price_open;
+            } else if (_order_price_open < _opricemin) {
+              _opricemin = _order_price_open;
+            }
+            _orders_active.Set(_ticket, _order);
+          }
+        }
+      }
+    }
+    if (_opricemax != 0.0) {
+      ssparams.SetPriceMax(_opricemax);
+    }
+    if (_opricemin != 0.0) {
+      ssparams.SetPriceMin(_opricemin);
+    }
+    return GetLastError() == ERR_NO_ERROR;
+  }
+
+  /**
+   * Event on new time periods.
+   */
+  virtual void OnPeriod(unsigned int _periods = DATETIME_NONE) {
+    if ((_periods & DATETIME_MINUTE) != 0) {
+      // New minute started.
+      strade.UpdateStates();
+    }
+    if ((_periods & DATETIME_HOUR) != 0) {
+      // New hour started.
+      OrdersLoadByMagic();
+    }
+    if ((_periods & DATETIME_DAY) != 0) {
+      // New day started.
+      DictStruct<long, Ref<Order>> _orders_active = strade.GetOrdersActive();
+      _orders_active.Clear();
+      OrdersLoadByMagic();
+    }
+  }
+
+  /**
    * Check strategy's opening signal.
    */
   bool SignalOpen(ENUM_ORDER_TYPE _cmd, int _method, float _level = 0.0f, int _shift = 0) {
@@ -588,6 +658,30 @@ class Stg_Oscillator_Martingale : public Strategy {
                        _indi[_shift][0];
         }
         break;
+    }
+    if (!_result && strade.Get<bool>(TRADE_STATE_ORDERS_ACTIVE)) {
+      _result = true;
+      double _level_pips = _level * Chart().GetPipSize();
+      switch (_cmd) {
+        case ORDER_TYPE_BUY:
+          _result &= _indi.IsIncreasing(1, 0, _shift);
+          _result &= ssparams.GetPriceMin() != 0.0;
+          _result &= strade.GetChart().GetOpenOffer(_cmd) < ssparams.GetPriceMin() - _level_pips;
+          if (_result && _method != 0) {
+            // if (METHOD(_method, 0)) _result &= _martingale_ratio < 0;
+            // if (METHOD(_method, 1)) _result &= _martingale_ratio <= _lots_ratio;
+          }
+          break;
+        case ORDER_TYPE_SELL:
+          _result &= _indi.IsDecreasing(1, 0, _shift);
+          _result &= ssparams.GetPriceMax() != 0.0;
+          _result &= strade.GetChart().GetOpenOffer(_cmd) > ssparams.GetPriceMax() + _level_pips;
+          if (_result && _method != 0) {
+            // if (METHOD(_method, 0)) _result &= _martingale_ratio > 0;
+            // if (METHOD(_method, 1)) _result &= _martingale_ratio >= _lots_ratio;
+          }
+          break;
+      }
     }
     return _result;
   }
