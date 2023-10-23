@@ -1,4 +1,4 @@
-# Strategy Oscillator
+# Strategy Oscillator Martingale
 
 [![Status][gha-image-check-master]][gha-link-check-master]
 [![Status][gha-image-compile-master]][gha-link-compile-master]
@@ -10,7 +10,8 @@
 
 ## Description
 
-Strategy based on selected oscillator-type single-valued indicators.
+Strategy based on oscillator-type single-valued indicators
+with martingale order management.
 
 ## Dependencies
 
@@ -25,12 +26,12 @@ Strategy based on selected oscillator-type single-valued indicators.
 [gh-discuss-link]: https://github.com/EA31337/EA31337-Strategies/discussions
 
 [gh-edit-badge]: https://img.shields.io/badge/GitHub-edit-purple.svg?logo=github
-[gh-edit-link]: https://github.dev/EA31337/Strategy-Oscillator
+[gh-edit-link]: https://github.dev/EA31337/Strategy-Oscillator_Martingale
 
-[gha-link-check-master]: https://github.com/EA31337/Strategy-Oscillator/actions?query=workflow:Check+branch%3Amaster
-[gha-image-check-master]: https://github.com/EA31337/Strategy-Oscillator/workflows/Check/badge.svg?branch=master
-[gha-link-compile-master]: https://github.com/EA31337/Strategy-Oscillator/actions?query=workflow:Compile+branch%3Amaster
-[gha-image-compile-master]: https://github.com/EA31337/Strategy-Oscillator/workflows/Compile/badge.svg?branch=master
+[gha-link-check-master]: https://github.com/EA31337/Strategy-Oscillator_Martingale/actions?query=workflow:Check+branch%3Amaster
+[gha-image-check-master]: https://github.com/EA31337/Strategy-Oscillator_Martingale/workflows/Check/badge.svg?branch=master
+[gha-link-compile-master]: https://github.com/EA31337/Strategy-Oscillator_Martingale/actions?query=workflow:Compile+branch%3Amaster
+[gha-image-compile-master]: https://github.com/EA31337/Strategy-Oscillator_Martingale/workflows/Compile/badge.svg?branch=master
 
 [license-image]: https://img.shields.io/github/license/EA31337/EA31337-Strategies.svg
 [license-link]: https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)
